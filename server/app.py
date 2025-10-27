@@ -59,9 +59,8 @@ def professeur_detail(id):
         return jsonify({'message': 'Professeur supprimé'}), 204
 
 
-# ------------------------
+
 #   ROUTES COURS
-# ------------------------
 @app.route('/api/cours', methods=['GET', 'POST'])
 def cours():
     if request.method == 'GET':
@@ -100,9 +99,9 @@ def cours_detail(id):
         return jsonify({'message': 'Cours supprimé'}), 204
 
 
-# ------------------------
+
 #   ROUTES ETUDIANTS
-# ------------------------
+
 @app.route('/api/etudiants', methods=['GET', 'POST'])
 def etudiants():
     if request.method == 'GET':
@@ -140,9 +139,8 @@ def etudiant_detail(id):
         return jsonify({'message': 'Étudiant supprimé'}), 204
 
 
-# ------------------------
+
 #   ROUTES LECONS
-# ------------------------
 @app.route('/api/lecons', methods=['GET', 'POST'])
 def lecons():
     if request.method == 'GET':
@@ -182,9 +180,7 @@ def lecon_detail(id):
         return jsonify({'message': 'Leçon supprimée'}), 204
 
 
-# ------------------------
 #   ROUTES ETUDIANT-COURS
-# ------------------------
 @app.route('/api/etudiant-cours', methods=['GET', 'POST'])
 def etudiant_cours():
     if request.method == 'GET':
@@ -229,7 +225,7 @@ def etudiant_cours_detail(id):
 if __name__ == '__main__':
     # Afficher toutes les routes disponibles
     print("\n" + "="*50)
-    print("📋 ROUTES API DISPONIBLES:")
+    print(" ROUTES API DISPONIBLES:")
     print("="*50)
     for rule in app.url_map.iter_rules():
         if rule.endpoint != 'static':
@@ -237,8 +233,7 @@ if __name__ == '__main__':
             print(f"  {rule.rule:40} [{methods}]")
     print("="*50 + "\n")
     
-    print("🚀 Serveur Flask démarré sur http://localhost:5000")
-    print("✅ Testez : http://localhost:5000/api/cours\n")
+    print(" Serveur Flask démarré sur http://localhost:5000")
+    print("Testez : http://localhost:5000/api/cours\n")
     
-    # host='0.0.0.0' permet l'accès depuis Windows dans WSL
     app.run(debug=True, host='0.0.0.0', port=5000)
