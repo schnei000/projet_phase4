@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css"; 
+import "./App.css"; q
 import CoursList from "./components/CoursList";
 import ProfesseursList from "./components/ProfesseursList";
 import EtudiantsList from "./components/EtudiantsList";

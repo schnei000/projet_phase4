@@ -7,7 +7,7 @@ with app.app_context():
     db.drop_all()
     db.create_all()
 
-    p1 = Professeur(nom="Professeur Alice")
+    p1 = Professeur(nom="Professeur elice")
     p2 = Professeur(nom="Professeur Bob")
     db.session.add_all([p1, p2])
     db.session.commit()
